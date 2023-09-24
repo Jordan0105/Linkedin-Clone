@@ -2,6 +2,12 @@ CREATE DATABASE IF NOT EXISTS nicajobs;
 
 USE nicajobs;
 
+CREATE USER 'nicajobs'@'localhost' IDENTIFIED BY 'Qwer1234';
+
+GRANT ALL PRIVILEGES ON nicajobs.* TO 'nicajobs'@'localhost';
+
+FLUSH PRIVILEGES;
+
 CREATE TABLE
     available_works (
         id INT AUTO_INCREMENT,
