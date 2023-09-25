@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import Jobs_card from "../cards/Jobs_card";
 const Available_jobs = () => {
   const [jobsList, setJobsList] = useState([]);
   useEffect(() => {
@@ -16,9 +16,11 @@ const Available_jobs = () => {
 
   return (
     <>
-      <h1>Jobs Available</h1>
+      <h2>Jobs Available</h2>
       {jobsList.map(job => (
-        <li key={job.id}>{job.name}</li>
+        <>
+          <Jobs_card data={job} />
+        </>
       ))}
     </>
   );
