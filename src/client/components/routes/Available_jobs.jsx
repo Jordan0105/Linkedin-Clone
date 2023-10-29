@@ -16,12 +16,14 @@ const Available_jobs = () => {
 
   return (
     <>
-      <h2>Jobs Available</h2>
-      {jobsList.map(job => (
-        <>
-          <Jobs_card data={job} />
-        </>
-      ))}
+      <h2 className="text-center mb-5">Jobs Available</h2>
+      <div className="d-flex justify-content-evenly">
+        {jobsList.map(job => (
+          <>
+            <Jobs_card data={job} />
+          </>
+        ))}
+      </div>
     </>
   );
 };

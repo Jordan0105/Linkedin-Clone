@@ -7,11 +7,11 @@ const Home = () => {
     <>
       <main>
         <section>
-          <Row className="cards">
-            <Col className="card_item">
+          <Row className="cards  xd py-5">
+            <Col className="card_item d-flex justify-content-center align-items-center">
               <Available_jobs />
             </Col>
-            <Col className="card_item">
+            <Col className="card_item d-flex justify-content-center align-items-center">
               <Customize_profile />
             </Col>
           </Row>

@@ -17,19 +17,31 @@ const Details_jobs = () => {
         console.error(error);
       });
   }, []);
-  useEffect(() => {
-    console.log(jobDetail[0]);
-  }, [jobDetail]);
+
   return (
-    <Container>
+    <Container className="mt-5">
       {jobDetail.map(job => (
         <>
           <h2>{job.name}</h2>
-          <p>{job.description}</p>
-          <p>{job.date_posted}</p>
-          <p>{job.available_positions}</p>
-          <p>{job.work_location}</p>
-          <p>{job.salary}</p>
+          <p>
+            <strong>Job Description:</strong> {job.description}
+          </p>
+          <p>
+            <strong>Date Posted: </strong>
+            {new Date(job.date_posted).toLocaleDateString()}
+          </p>
+          <p>
+            <strong>Available Positions: </strong>
+            {job.available_positions}
+          </p>
+          <p>
+            <strong>Location: </strong>
+            {job.work_location}
+          </p>
+          <p>
+            <strong>Salary: </strong>
+            {job.salary}C$
+          </p>
         </>
       ))}
     </Container>
