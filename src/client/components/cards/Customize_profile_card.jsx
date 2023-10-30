@@ -9,6 +9,7 @@ const Customize_profile_card = () => {
         variant="top"
         src="https://png.pngtree.com/png-vector/20190307/ourlarge/pngtree-vector-edit-profile-icon-png-image_780345.jpg"
         width={100}
+        height={285}
       />
       <Card.Body>
         <Card.Title>Profile</Card.Title>

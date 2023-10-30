@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import Favorite_button from "./Favorite_button";
 
 const Jobs_card = ({ data }) => {
   return (
@@ -9,12 +10,15 @@ const Jobs_card = ({ data }) => {
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">
-          {new Date(data.date_posted).toLocaleDateString()}
+          {new Date(data.date_posted).toLocaleDateString("en-GB")}
         </Card.Subtitle>
         <Card.Text>{data.description}</Card.Text>
-        <Link to={`details/${data.id}`}>
-          <Button variant="success">See details</Button>
-        </Link>
+        <div className="buttons container d-flex justify-content-between">
+          <Link to={`details/${data.id}`}>
+            <Button variant="success">See details</Button>
+          </Link>
+          <Favorite_button id={data.id} />
+        </div>
       </Card.Body>
     </Card>
   );

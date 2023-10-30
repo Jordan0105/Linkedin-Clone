@@ -5,6 +5,7 @@ const users = require('./api/users');
 const detailed_jobs = require('./api/detailed_job');
 const cities = require('./api/cities');
 const countries = require('./api/countries')
+const favorites = require('./api/favorites');
 const port = 3000;
 const app = express();
 
@@ -15,6 +16,7 @@ app.use('/api', users);
 app.use('/api', detailed_jobs);
 app.use('/api', cities);
 app.use('/api', countries);
+app.use('/api', favorites);
 
 ViteExpress.listen(app, port, () =>
   console.log(`Server is listening on port ${port}...`)

@@ -1,0 +1,11 @@
+#root {
+    height: 100vh;
+}
+
+.error_message_form {
+    color: #dc3545;
+}
+
+.container-form * {
+    width: 100%;
+}

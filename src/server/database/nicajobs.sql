@@ -30,3 +30,10 @@ CREATE TABLE
         password VARCHAR(255) NOT NULL,
         PRIMARY KEY (id)
     );
+
+CREATE TABLE
+    favorites (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        available_works_id INT,
+        FOREIGN KEY (available_works_id) REFERENCES available_works(id)
+    );
